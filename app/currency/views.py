@@ -74,7 +74,7 @@ def sequence(request):
 
 def add_data():
     Currency.objects.all().delete()
-    with open('start3.csv', 'rU') as file:
+    with open('start.csv', 'rU') as file:
         matrix = [row for row in csv.reader(file)]
     for array in matrix:
         currency_from, time = Currency.objects.get_or_create(name=array[0].strip())
